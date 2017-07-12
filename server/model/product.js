@@ -1,6 +1,3 @@
-/**
- * Created by macbookpro on 12/07/2017.
- */
 const mongoose = require('mongoose');
 const ProductSchema = new mongoose.Schema({
     name: {type: String},
@@ -11,6 +8,17 @@ const ProductSchema = new mongoose.Schema({
     createdAt: {type: Date, default: Date.now},
     updatedAt: {type: Date, default: Date.now}
 });
+
+ProductSchema
+    .virtual('information')
+    .get(function () {
+        return this.name + '-' + this.model + ' belongs to the category '+this.category +'.'
+    });
+ProductSchema
+    .virtual('shortDescription')
+    .get(function () {
+        return this.description.substr(0, 50)+'...'
+    });
 
 
 module.exports = mongoose.model('Product', ProductSchema);

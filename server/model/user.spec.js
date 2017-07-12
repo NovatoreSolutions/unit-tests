@@ -33,8 +33,8 @@ describe('User Model', function() {
 		})
 
 		describe('fullAddress', function() {
-			it('should return "Ameer Hyder" when user object first name is Ameer and last name is Hyder', function() {
-				expect(user.fullName).to.equal('Ameer Hyder');
+			it('should return "Milaad Street 54000, Lahore Punjab, Pakistan" when address object street is Milaad Street, city is Lahore, state is Punjab, country is Pakistan and zip is 54000 ', function() {
+				expect(user.fullAddress).to.equal('Milaad Street 54000, Lahore Punjab, Pakistan');
 			});
 
 		})
