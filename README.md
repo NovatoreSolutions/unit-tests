@@ -1,6 +1,6 @@
 # Novatore Unit Tests Examples
 
-Sample unit tests for utility function and Mongoose virtuals using mocha, sinon and chai. 
+Sample unit tests for utility functions and Mongoose virtuals using mocha, sinon and chai. 
 
 ## Instructions To Run (prerequisite: Node and Npm) 
 1. Install packages `npm install` 
